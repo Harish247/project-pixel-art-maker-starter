@@ -6,7 +6,7 @@ submitButton.click(makeGrid);
 function makeGrid() {
     let height = $("#input_height").val();
     let width = $("#input_width").val();
-    let color = $("#colorPicker").val();
+    let color = $("#colorPicker");
     let rows = $("tr");
     rows.each(function(element){
         this.remove();
@@ -24,7 +24,7 @@ function makeGrid() {
                 $(this).css('background-color','#ffffff');
                 $(this).removeProp('checked');
             }else{    
-                $(this).css('background-color',$("#colorPicker").val());
+                $(this).css('background-color',color.val());
                 $(this).prop('checked',true);
             };
         })
